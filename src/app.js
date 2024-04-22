@@ -7,8 +7,15 @@ const PORT = 8080
 const productManager = new ProductManager('./products.json');
 
 app.get('/products', (req, res) => {
-    const products = productManager.getProducts();
-    res.json(products);
+    const { limit } = req.query;
+
+    if (limit) {
+        const products = productManager.getProducts().slice(0, parseInt(limit));
+        res.json(products);
+    } else {
+        const products = productManager.getProducts();
+        res.json(products);
+    }
 });
 
 app.get('/products/:pid', (req, res) => {
