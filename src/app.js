@@ -1,12 +1,13 @@
 const express = require("express")
 const ProductManager = require("./productManager");
+const cartRouter = require("./routes/carts.router");
 const productRouter = require("./routes/products.router");
 
 const app = express();
 const PORT = 8080;
 
 app.use(express.json());
-app.use("/api/carts", productRouter);
+app.use("/api/carts", cartRouter);
 app.use("/api/products", productRouter);
 
 const productManager = new ProductManager('./products.json');
