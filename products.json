@@ -34,5 +34,14 @@
     "thumbnail": "imagen1.jpg",
     "code": "EFG456",
     "stock": 11
+  },
+  {
+    "id": 5,
+    "title": "Nuevo producto",
+    "description": "Descripción del nuevo producto",
+    "price": 10.99,
+    "thumbnail": "imagen1.jpg",
+    "code": "MNO123",
+    "stock": 100
   }
 ]

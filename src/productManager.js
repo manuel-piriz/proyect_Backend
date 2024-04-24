@@ -87,27 +87,4 @@ class ProductManager {
     }
 }
 
-const manager = new ProductManager('products.json'); 
-
-console.log(manager.getProducts());
-
-try {
-    console.log(manager.getProductById(2));
-} catch (error) {
-    console.error(error.message);
-}
-
-
-try {
-    console.log(manager.updateProduct(2, { price: 800, stock: 12 }));
-} catch (error) {
-    console.error(error.message);
-}
-
-try {
-    console.log(manager.deleteProduct(8));
-} catch (error) {
-    console.error(error.message);
-}
-
 module.exports = ProductManager;
